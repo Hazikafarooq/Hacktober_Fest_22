@@ -9,12 +9,16 @@ using namespace std;
 int main()
 {
     float weight, height, bmi;
-
-    cin >> weight >> height;
-    bmi = weight / (height * height);
+    cout<<"Enter your Weight in KG: "; 		// Written to increase the readability and user interaction...
+    cin >> weight;
+    
+    cout<<"Enter your Height in Centimeters: ";			// Written to increase the readability and user interaction...
+    cin >> height;
+    
+    bmi = weight / ((height / 100) * (height / 100));			//Formula Correction...
     if (bmi < 18.5)
         cout << "Underweight\n";
-    else if (bmi > 18.5 && bmi < 24.9)
+    else if (bmi > 18.4 && bmi < 25)			// Normal BMI value range correction...
         cout << "Normal weight\n";
 
     else
